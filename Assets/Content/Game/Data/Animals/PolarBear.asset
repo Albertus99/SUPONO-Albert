@@ -22,3 +22,5 @@ MonoBehaviour:
   senseRadius: 12
   walkSpeed: 3
   sprintMultiplier: 1.4
+  sprintDuration: 3
+  staminaRecoveryDuration: 5

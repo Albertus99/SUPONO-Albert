@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 1909493963309647368}
   - component: {fileID: 5460698123073142587}
   - component: {fileID: 3343093900693323442}
+  - component: {fileID: 4118025808430671498}
   - component: {fileID: 4051089978308280196}
   - component: {fileID: 2352886700242859892}
   - component: {fileID: 2743561445144876096}
@@ -173,6 +174,20 @@ MonoBehaviour:
   isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
+--- !u!114 &4118025808430671498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457750204426885272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ad159c65692da47b69bac949f6c2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Stamina
+  recoverThreshold: 0.3
+  regenDelay: 0.75
 --- !u!114 &4051089978308280196
 MonoBehaviour:
   m_ObjectHideFlags: 0
