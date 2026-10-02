@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "ai-game-developer": {
+      "args": [
+        "port=22759",
+        "plugin-timeout=10000",
+        "client-transport=stdio",
+        "project=273a0a84"
+      ],
+      "command": "D:/Projects/SUPONO-Albert/Library/mcp-server/win-x64/gamedev-mcp-server.exe"
+    }
+  }
+}
