@@ -15,6 +15,7 @@ smaller animals and food. Bigger animals hunt you, and each level is won by eati
 | DI / async | **VContainer** (project scope → main-menu / level child scopes), **UniTask** (every async flow takes a `CancellationToken`) |
 | IAP | **Unity IAP 5.4** (`StoreController`), Fake Store (sandbox) in the editor |
 | Analytics | **Firebase Analytics** SDK (13.x), console fallback |
+| A/B testing | **Unity Remote Config** 4.2 (UGS, anonymous auth) with Game Overrides |
 | Art / audio | Kenney cube-pets, mini-forest, fantasy-town, survival and food kits; Hyper Casual UI pack; Baloo 2 font; custom toon shaders |
 
 **Assemblies** (dependencies point downward only):
@@ -92,6 +93,7 @@ audio) lives in `Assets/Content`.
 - [x] **Daily Rewards**: once-per-day popup on a 7-day ladder; coin-flight feedback; the streak resets if a day is missed
 - [x] **Debug Menu** from the main menu (gear): god mode, infinite stamina, coin rush, unlock levels, free characters, no cinematics, daily reward every visit, fail purchases, outlines off, mute. Every toggle is independent; all off (or Reset All) = default game
 - [x] **Firebase Analytics**: `level_start`, `level_end`, `purchase_click`, `purchase_success` / `purchase_failed`, `daily_reward_claim`, `character_unlock`, `select_item` (see `Assets/Scripts/App/Analytics`)
+- [x] **A/B test via Unity Remote Config**: the daily reward ladder, `control` (25…300) vs `generous` (50…600). Remote key `daily_reward_variant`, assigned with a Game Override. The variant is stored in the save, set as the analytics user property `ab_daily_reward_variant`, and an `experiment_exposure` event fires when the popup is shown. Debug toggle "A/B: Test Variant" forces it locally
 - [x] Saves: a single save service; progress, coins, characters, streak and debug toggles persist
 - [x] Toon shading and outline, cinematic zoom-ins and slow motion on big bites, a close-up when you're eaten
 - [x] Audio: sound effects, each animal's own voice when eaten, looping background music

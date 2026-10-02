@@ -14,11 +14,16 @@ namespace Supono.App.Analytics
     public interface IAnalytics
     {
         void Log(AnalyticsEvent analyticsEvent);
+
+        /// <summary>A property of the player attached to all their events (e.g. their A/B variant).</summary>
+        void SetUserProperty(string name, string value);
     }
 
     /// <summary>Writes events to the console. The backend when Firebase isn't installed (editor, tests).</summary>
     public sealed class ConsoleAnalytics : IAnalytics
     {
+        public void SetUserProperty(string name, string value) => Debug.Log($"[Analytics] user property {name}={value}");
+
         public void Log(AnalyticsEvent analyticsEvent)
         {
             var parameters = new ParameterDictionary();
@@ -39,6 +44,7 @@ namespace Supono.App.Analytics
     public sealed class FirebaseAnalytics : IAnalytics
     {
         readonly Queue<AnalyticsEvent> pending = new();
+        readonly Dictionary<string, string> pendingProperties = new();
         readonly ConsoleAnalytics console = new();
         bool ready;
         bool unavailable;
@@ -53,6 +59,8 @@ namespace Supono.App.Analytics
                     _ = FirebaseApp.DefaultInstance; // throws without google-services.json / GoogleService-Info.plist
                     FirebaseAnalyticsApi.SetAnalyticsCollectionEnabled(true);
                     ready = true;
+                    foreach (KeyValuePair<string, string> property in pendingProperties) FirebaseAnalyticsApi.SetUserProperty(property.Key, property.Value);
+                    pendingProperties.Clear();
                     while (pending.Count > 0) Send(pending.Dequeue());
                 }
                 catch (Exception exception)
@@ -60,6 +68,7 @@ namespace Supono.App.Analytics
                     // No backend configured (e.g. in the editor): events keep going to the console only.
                     unavailable = true;
                     pending.Clear();
+                    pendingProperties.Clear();
                     Debug.LogWarning($"[Analytics] Firebase not configured, logging to the console only: {exception.Message}");
                 }
             });
@@ -70,6 +79,13 @@ namespace Supono.App.Analytics
             console.Log(analyticsEvent);
             if (ready) Send(analyticsEvent);
             else if (!unavailable) pending.Enqueue(analyticsEvent);
+        }
+
+        public void SetUserProperty(string name, string value)
+        {
+            console.SetUserProperty(name, value);
+            if (ready) FirebaseAnalyticsApi.SetUserProperty(name, value);
+            else if (!unavailable) pendingProperties[name] = value;
         }
 
         static void Send(AnalyticsEvent analyticsEvent)

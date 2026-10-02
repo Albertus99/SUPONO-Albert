@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Supono.App.Characters;
+using Supono.App.Experiments;
 using Supono.App.Rules;
 using Supono.App.Shop;
 using Supono.Core;
@@ -68,6 +70,32 @@ namespace Supono.Debugging
         }
 
         public bool IsDue(DateTime? lastClaim, DateTime today) => debug.DailyRewardEveryVisit.IsOn || game.IsDue(lastClaim, today);
+    }
+
+    /// <summary>Lets QA see an A/B test's test variant without a Remote Config override.</summary>
+    public sealed class DebugExperimentAssignments : IExperimentAssignments
+    {
+        readonly ExperimentService game;
+        readonly DebugSettings debug;
+
+        public DebugExperimentAssignments(ExperimentService game, DebugSettings debug)
+        {
+            this.game = game;
+            this.debug = debug;
+        }
+
+        public UniTask WhenReadyAsync(CancellationToken cancellation) =>
+            debug.ForceTestVariant.IsOn ? UniTask.CompletedTask : game.WhenReadyAsync(cancellation);
+
+        public IReadOnlyList<Experiment> Experiments => game.Experiments;
+
+        public string VariantOf(Experiment experiment) =>
+            debug.ForceTestVariant.IsOn && experiment.VariantIds.Count > 1 ? experiment.VariantIds[1] : game.VariantOf(experiment);
+
+        public void ReportExposure(Experiment experiment)
+        {
+            if (!debug.ForceTestVariant.IsOn) game.ReportExposure(experiment); // forced views would pollute the results
+        }
     }
 
     /// <summary>Lets QA see the purchase failure feedback on demand, without touching the store.</summary>

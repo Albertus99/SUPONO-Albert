@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0990c285ad5f55b4d90553a8809b8564, type: 3}
+  m_Name: DailyRewardExperiment
+  m_EditorClassIdentifier: Supono.App::Supono.App.Experiments.DailyRewardExperiment
+  remoteKey: daily_reward_variant
+  displayName: Daily reward
+  variants:
+  - id: control
+    rewards: 19000000320000004b0000006400000096000000c80000002c010000
+  - id: generous
+    rewards: 320000006400000096000000c80000002c0100009001000058020000

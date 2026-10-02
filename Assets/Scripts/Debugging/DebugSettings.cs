@@ -23,6 +23,7 @@ namespace Supono.Debugging
         public readonly DebugToggle NoCinematics = new("no-cinematics", "No Cinematics", "Disable zoom-ins and slow motion.");
         public readonly DebugToggle DailyRewardEveryVisit = new("daily-every-visit", "Daily Reward Every Visit", "Show the daily reward on every main menu visit.");
         public readonly DebugToggle FailPurchases = new("fail-purchases", "Fail Purchases", "Every store purchase fails (test the error flow).");
+        public readonly DebugToggle ForceTestVariant = new("ab-test-variant", "A/B: Test Variant", "Force the test variant of every A/B test.");
         public readonly DebugToggle OutlinesOff = new OutlinesOffToggle();
         public readonly DebugToggle Mute = new MuteToggle();
 
@@ -36,7 +37,7 @@ namespace Supono.Debugging
             All = new[]
             {
                 GodMode, InfiniteStamina, CoinRush, UnlockAllLevels, FreeCharacters, NoCinematics,
-                DailyRewardEveryVisit, FailPurchases, OutlinesOff, Mute,
+                DailyRewardEveryVisit, FailPurchases, ForceTestVariant, OutlinesOff, Mute,
             };
 
             List<string> enabled = saves.Load<Data>(Section).enabled;

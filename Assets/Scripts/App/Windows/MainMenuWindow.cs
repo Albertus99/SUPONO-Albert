@@ -39,6 +39,7 @@ namespace Supono.App.Windows
         [SerializeField] Button shopButton;
         [SerializeField] Button quitButton;
         [SerializeField] CoinCounter coins;
+        [SerializeField, Tooltip("The player's A/B test groups.")] TMP_Text experimentsLabel;
 
         [Header("Module buttons")]
         [SerializeField] RectTransform extensionBar;
@@ -95,6 +96,13 @@ namespace Supono.App.Windows
                 label.gameObject.SetActive(!hasIcon);
                 label.text = extensions[i].Label;
             }
+        }
+
+        /// <summary>Lines like "Daily reward: generous"; empty hides the label.</summary>
+        public void ShowExperiments(string text)
+        {
+            experimentsLabel.text = text;
+            experimentsLabel.gameObject.SetActive(!string.IsNullOrEmpty(text));
         }
 
         public UniTask CountCoinsAsync(int from, int to, CancellationToken cancellation) => coins.CountAsync(from, to, cancellation);

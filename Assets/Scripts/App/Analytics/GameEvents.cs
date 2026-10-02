@@ -140,6 +140,27 @@ namespace Supono.App.Analytics
         }
     }
 
+    /// <summary>The player saw the feature an A/B test changes (the moment they enter the experiment's analysis).</summary>
+    public sealed class ExperimentExposureEvent : AnalyticsEvent
+    {
+        readonly string experiment;
+        readonly string variant;
+
+        public ExperimentExposureEvent(string experiment, string variant)
+        {
+            this.experiment = experiment;
+            this.variant = variant;
+        }
+
+        public override string Name => "experiment_exposure";
+
+        public override void Describe(IEventParameters parameters)
+        {
+            parameters.Add("experiment", experiment);
+            parameters.Add("variant", variant);
+        }
+    }
+
     /// <summary>A character was chosen to play (Firebase recommended event "select_item").</summary>
     public sealed class CharacterSelectEvent : AnalyticsEvent
     {

@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Supono.Animals;
 using Supono.App.Analytics;
 using Supono.App.Characters;
+using Supono.App.Experiments;
 using Supono.App.Extensions;
 using Supono.App.Flow;
 using Supono.App.Progress;
@@ -33,6 +35,7 @@ namespace Supono.App.MainMenu
         readonly CharacterPreviewFactory previewFactory;
         readonly ProgressService progress;
         readonly DailyRewardService dailyRewards;
+        readonly IExperimentAssignments experiments;
         readonly ILevelAccess levelAccess;
         readonly ICharacterPricing pricing;
         readonly CoinShop coinShop;
@@ -43,7 +46,7 @@ namespace Supono.App.MainMenu
         readonly CancellationTokenSource lifetime = new();
 
         public MainMenuFlow(IWindowManager windows, GameFlow gameFlow, LevelCatalog levels, CharacterCatalog characters,
-            CharacterPreviewFactory previewFactory, ProgressService progress, DailyRewardService dailyRewards, ILevelAccess levelAccess, ICharacterPricing pricing,
+            CharacterPreviewFactory previewFactory, ProgressService progress, DailyRewardService dailyRewards, IExperimentAssignments experiments, ILevelAccess levelAccess, ICharacterPricing pricing,
             CoinShop coinShop, IReadOnlyList<IMainMenuExtension> extensions, IAnalytics analytics, IAudioService audio, SoundLibrary sounds)
         {
             this.windows = windows;
@@ -53,6 +56,7 @@ namespace Supono.App.MainMenu
             this.previewFactory = previewFactory;
             this.progress = progress;
             this.dailyRewards = dailyRewards;
+            this.experiments = experiments;
             this.levelAccess = levelAccess;
             this.pricing = pricing;
             this.coinShop = coinShop;
@@ -73,9 +77,18 @@ namespace Supono.App.MainMenu
             bool offerDailyReward = true;
             while (true)
             {
-                MainMenuWindow menu = await windows.OpenAsync<MainMenuWindow>(
-                    w => w.Setup(gameFlow.HasLevels, progress.Coins, extensionButtons), cancellation);
-                if (offerDailyReward && dailyRewards.IsAvailable) await RunDailyRewardAsync(menu, cancellation);
+                MainMenuWindow menu = await windows.OpenAsync<MainMenuWindow>(w =>
+                {
+                    w.Setup(gameFlow.HasLevels, progress.Coins, extensionButtons);
+                    w.ShowExperiments(string.Empty);
+                }, cancellation);
+                ShowExperimentGroupsAsync(menu, cancellation).Forget();
+                if (offerDailyReward && dailyRewards.IsAvailable)
+                {
+                    // The reward ladder is A/B tested: wait (briefly, bounded by the fetch timeout) for the assignment.
+                    await experiments.WhenReadyAsync(cancellation);
+                    await RunDailyRewardAsync(menu, cancellation);
+                }
                 offerDailyReward = false;
 
                 MainMenuChoice choice = await menu.WaitForChoiceAsync(cancellation);
@@ -106,6 +119,18 @@ namespace Supono.App.MainMenu
             }
         }
 
+        // ---------------------------------------------------------------- A/B groups
+
+        /// <summary>Shows the player's A/B groups on the menu once Remote Config has assigned them.</summary>
+        async UniTaskVoid ShowExperimentGroupsAsync(MainMenuWindow menu, CancellationToken cancellation)
+        {
+            if (await experiments.WhenReadyAsync(cancellation).SuppressCancellationThrow()) return;
+            var text = new StringBuilder("A/B test");
+            foreach (Experiment experiment in experiments.Experiments)
+                text.Append("  ·  ").Append(experiment.DisplayName).Append(": <b>").Append(experiments.VariantOf(experiment)).Append("</b>");
+            menu.ShowExperiments(text.ToString());
+        }
+
         // ---------------------------------------------------------------- daily reward
 
         async UniTask RunDailyRewardAsync(MainMenuWindow menu, CancellationToken cancellation)
@@ -113,7 +138,8 @@ namespace Supono.App.MainMenu
             int coinsBefore = progress.Coins;
             int day = dailyRewards.NextDay;
             DailyRewardWindow window = await windows.OpenAsync<DailyRewardWindow>(
-                w => w.Setup(day, DailyRewardService.Rewards), cancellation);
+                w => w.Setup(day, dailyRewards.Rewards, dailyRewards.Group), cancellation);
+            dailyRewards.ReportShown();
             await window.WaitForChoiceAsync(cancellation);
 
             int granted = dailyRewards.Claim();

@@ -735,7 +735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 440, y: 20}
+  m_AnchoredPosition: {x: 0, y: -290}
   m_SizeDelta: {x: 400, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866135180472292602
@@ -871,7 +871,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -440, y: 20}
+  m_AnchoredPosition: {x: -230, y: 250}
   m_SizeDelta: {x: 400, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8830402329804293799
@@ -1007,7 +1007,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 230, y: 250}
   m_SizeDelta: {x: 400, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3034543277153615599
@@ -3371,8 +3371,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 165}
-  m_SizeDelta: {x: 1200, y: 40}
+  m_AnchoredPosition: {x: 0, y: 175}
+  m_SizeDelta: {x: 960, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1391469425261520009
 CanvasRenderer:
@@ -3517,7 +3517,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1500, y: 900}
+  m_SizeDelta: {x: 1040, y: 1600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &959455681338159542
 CanvasRenderer:
@@ -4365,9 +4365,9 @@ RectTransform:
   - {fileID: 4363186012046342502}
   m_Father: {fileID: 5697946134216364090}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -200, y: -95}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -205}
   m_SizeDelta: {x: 260, y: 76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6787211575518072274

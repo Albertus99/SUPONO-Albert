@@ -54,6 +54,7 @@ MonoBehaviour:
   windowCatalog: {fileID: 11400000, guid: 0b9729bee199eb04da956fb9851f675e, type: 2}
   characterCatalog: {fileID: 11400000, guid: 0eca45e2d227ef64c97ab8e6af478fd9, type: 2}
   coinPackCatalog: {fileID: 11400000, guid: 1e2ca786278937148a5ef565b9f71328, type: 2}
+  dailyRewardExperiment: {fileID: 11400000, guid: aee7f5c9bc7812f4791d95dffe5553d0, type: 2}
   soundLibrary: {fileID: 11400000, guid: 4c72780e6b309a844bd911e88316e1cc, type: 2}
   uiRootPrefab: {fileID: 553927256416626586, guid: 816ec60bfd7e2cd45940d945811eac6f, type: 3}
   installers:

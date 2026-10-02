@@ -24,7 +24,7 @@ namespace Supono.App.Level
     }
 
     /// <summary>
-    /// Level lifecycle: intro window â†’ play (HUD) â‡„ pause â†’ result window.
+    /// Level lifecycle: intro window → play (HUD) ⇄ pause → result window.
     /// Eat the goal animal to win; get eaten (or let something else eat the goal) to lose.
     /// Coins collected in the level are banked either way; winning adds the completion reward and unlocks the next level.
     /// The world is frozen with timeScale outside of Playing.
@@ -77,7 +77,7 @@ namespace Supono.App.Level
             string title = gameFlow.CurrentLevel?.displayName ?? SceneManager.GetActiveScene().name;
             string goal = registry.Goal != null ? registry.Goal.DisplayName : "biggest animal";
             string body = $"Eat smaller animals to grow.\nEat the <b>{goal}</b> to win!\n\n" +
-                          "<size=26>WASD move   Â·   Shift sprint   Â·   Esc pause\n" +
+                          "<size=26>WASD move   ·   Shift sprint   ·   Esc pause\n" +
                           "Food grows you. Stamina only refills from blue-ringed food. Grab the coins!</size>";
 
             LevelIntroWindow intro = await windows.OpenAsync<LevelIntroWindow>(w => w.Setup(title, body), cancellation);

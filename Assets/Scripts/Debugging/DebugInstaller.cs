@@ -1,3 +1,4 @@
+using Supono.App.Experiments;
 using Supono.App.Extensions;
 using Supono.App.Rules;
 using Supono.App.Shop;
@@ -29,6 +30,7 @@ namespace Supono.Debugging
             builder.Register<DebugCharacterPricing>(Lifetime.Singleton).As<ICharacterPricing>();
             builder.Register<DebugDailyRewardSchedule>(Lifetime.Singleton).As<IDailyRewardSchedule>();
             builder.Register<DebugIapStore>(Lifetime.Singleton).As<IIapStore>();
+            builder.Register<DebugExperimentAssignments>(Lifetime.Singleton).As<IExperimentAssignments>();
 
             builder.RegisterInstance(new DebugWindows(windows)).As<IWindowSource>();
             builder.Register<DebugMenuExtension>(Lifetime.Singleton).As<IMainMenuExtension>().WithParameter(menuIcon);

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Supono.App.Analytics;
 using Supono.App.Characters;
+using Supono.App.Experiments;
 using Supono.App.Extensions;
 using Supono.App.Flow;
 using Supono.App.Progress;
@@ -31,6 +32,7 @@ namespace Supono.App
         [SerializeField] WindowCatalog windowCatalog;
         [SerializeField] CharacterCatalog characterCatalog;
         [SerializeField] CoinPackCatalog coinPackCatalog;
+        [SerializeField] DailyRewardExperiment dailyRewardExperiment;
         [SerializeField] SoundLibrary soundLibrary;
         [SerializeField] UIRoot uiRootPrefab;
         [SerializeField, Tooltip("Optional modules, installed after the game's own registrations.")]
@@ -59,6 +61,12 @@ namespace Supono.App
             builder.Register<ProgressService>(Lifetime.Singleton);
             builder.Register<SystemClock>(Lifetime.Singleton).As<IClock>();
             builder.Register<DailyRewardService>(Lifetime.Singleton);
+
+            // A/B tests, assigned by Unity Remote Config.
+            builder.Register<UnityRemoteConfig>(Lifetime.Singleton).As<IRemoteConfig>();
+            builder.RegisterInstance(dailyRewardExperiment).AsSelf().As<Experiment>();
+            builder.RegisterEntryPoint<ExperimentService>().AsSelf(); // + IExperimentAssignments
+            builder.Register<ExperimentDailyRewardLadder>(Lifetime.Singleton).As<IDailyRewardLadder>();
 
             builder.Register<ConsoleAnalytics>(Lifetime.Singleton).As<IAnalytics>();
 #if SUPONO_FIREBASE

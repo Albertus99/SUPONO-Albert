@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Supono.UI;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ namespace Supono.App.Windows
         [SerializeField] Button claimButton;
         [SerializeField] Image flyingCoinTemplate;
         [SerializeField, Min(1)] int flyingCoins = 12;
+        [SerializeField, Tooltip("Shows the player's A/B test group for this reward ladder.")]
+        TMP_Text groupLabel;
 
         int today;
 
@@ -26,9 +29,11 @@ namespace Supono.App.Windows
         }
 
         /// <param name="nextDay">1-based day being claimed today.</param>
-        public void Setup(int nextDay, IReadOnlyList<int> rewards)
+        /// <param name="group">The player's A/B test group for the ladder.</param>
+        public void Setup(int nextDay, IReadOnlyList<int> rewards, string group)
         {
             today = nextDay;
+            groupLabel.text = $"Test group: <b>{group}</b>";
             claimButton.interactable = true;
             for (int i = 0; i < days.Count; i++)
             {

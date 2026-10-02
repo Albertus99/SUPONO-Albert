@@ -96,6 +96,9 @@ namespace Supono.App.Shop
 
         public string PriceOf(string productId)
         {
+            // The editor's Fake Store reports a placeholder ($0.01) for everything; show the catalog price instead.
+            if (Application.isEditor) return null;
+
             string price = store?.GetProductById(productId)?.metadata?.localizedPriceString;
             return string.IsNullOrEmpty(price) ? null : price;
         }
