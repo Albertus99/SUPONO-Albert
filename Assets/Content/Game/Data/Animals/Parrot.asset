@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693389c3110262541b2730df1e317900, type: 3}
+  m_Name: Parrot
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
+  displayName: Parrot
+  modelPrefab: {fileID: 919132149155446097, guid: 3a20cb8210a9b1048affbe52beeb58a1, type: 3}
+  baseSize: 0.3
+  bodyRadius: 0.8783949
+  bodyHeight: 1.68125
+  temperament: 0
+  eatsAnimals: 0
+  senseRadius: 7
+  walkSpeed: 3.5
+  sprintMultiplier: 1.7
