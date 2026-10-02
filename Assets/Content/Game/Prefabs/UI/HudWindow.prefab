@@ -1032,6 +1032,7 @@ GameObject:
   - component: {fileID: 5559359828436350165}
   - component: {fileID: 435045692623182349}
   - component: {fileID: 6485538407047669144}
+  - component: {fileID: 1436728746750909352}
   m_Layer: 0
   m_Name: Coins
   m_TagString: Untagged
@@ -1098,6 +1099,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1436728746750909352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8366376675073406385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e8e85eaed367a149bcac89808352ca1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.App::Supono.App.Windows.CoinCounter
+  amountLabel: {fileID: 4893029941592996355}
 --- !u!1 &8943592149622828468
 GameObject:
   m_ObjectHideFlags: 0

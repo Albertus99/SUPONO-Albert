@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17b74982ee8c32c4dbf6fba99f0e4916, type: 3}
+  m_Name: DebugWindowCatalog
+  m_EditorClassIdentifier: Supono.UI::Supono.UI.WindowCatalog
+  windows:
+  - {fileID: 1231611572275164773, guid: 765aaf34927351d4e81a7d6a4462f53e, type: 3}

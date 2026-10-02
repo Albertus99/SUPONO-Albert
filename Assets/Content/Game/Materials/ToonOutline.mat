@@ -25,8 +25,13 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _CreaseFadeDistance: 2.2
     - _DepthThreshold: 0.05
-    - _FadeDistance: 110
+    - _FadeDistance: 3.5
+    - _FallbackFocus: 12
+    - _FarStrength: 0.35
+    - _GrazingBoost: 4
+    - _NearDistance: 1.25
     - _NormalThreshold: 0.55
     - _Thickness: 1.6
     m_Colors:

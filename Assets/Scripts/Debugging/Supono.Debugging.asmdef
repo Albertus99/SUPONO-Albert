@@ -1,0 +1,22 @@
+{
+    "name": "Supono.Debugging",
+    "rootNamespace": "Supono.Debugging",
+    "references": [
+        "Supono.Gameplay",
+        "Supono.UI",
+        "Supono.App",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI",
+        "VContainer",
+        "UniTask"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

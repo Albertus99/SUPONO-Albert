@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2cc8a964da53e4a88d62c202fc7ed4, type: 3}
+  m_Name: CharacterCatalog
+  m_EditorClassIdentifier: Supono.App::Supono.App.Characters.CharacterCatalog
+  characters:
+  - id: cat
+    displayName: Cat
+    description: Balanced all-rounder.
+    price: 0
+    definition: {fileID: 11400000, guid: c44bbe742339e594791d9358feb857ed, type: 2}
+    playerPrefab: {fileID: 6868883862020244571, guid: bf7d4c3a9280a484ab6e2f4463e93a0c, type: 3}
+  - id: bunny
+    displayName: Bunny
+    description: Tiny, but very fast.
+    price: 100
+    definition: {fileID: 11400000, guid: 296e82f31a25ca14a94b2cbf4eaef838, type: 2}
+    playerPrefab: {fileID: 2756680182809218008, guid: 5bbba1b2d626035499884888f8f83d7c, type: 3}
+  - id: penguin
+    displayName: Penguin
+    description: Slow, but hardly gets tired.
+    price: 200
+    definition: {fileID: 11400000, guid: 3362df5dabd55f7418cc24c4e6f33fd5, type: 2}
+    playerPrefab: {fileID: 118260467691263830, guid: 544546db8348fd944b1ab4d1ef11bce0, type: 3}
+  - id: fox
+    displayName: Fox
+    description: A quick and cunning hunter.
+    price: 250
+    definition: {fileID: 11400000, guid: 2726d169674498541acedcd9da07cfaa, type: 2}
+    playerPrefab: {fileID: 7034592031677104443, guid: 6f499a1e6d7f44341b4736c1b1b11e6d, type: 3}
+  - id: monkey
+    displayName: Monkey
+    description: Explosive bursts of speed.
+    price: 350
+    definition: {fileID: 11400000, guid: a352401895b5f85489d48c69b0640ee6, type: 2}
+    playerPrefab: {fileID: 5885705590615208124, guid: c73554221e6ec2448a0ab1bc410ffe61, type: 3}
+  - id: dog
+    displayName: Dog
+    description: Can sprint for a very long time.
+    price: 500
+    definition: {fileID: 11400000, guid: 445047377e16f6d4485112a3d3b22df1, type: 2}
+    playerPrefab: {fileID: 7023125307128336064, guid: c9bc29786dba34943a36e8f97c710d11, type: 3}
+  - id: panda
+    displayName: Panda
+    description: Starts big and sturdy, but slow.
+    price: 650
+    definition: {fileID: 11400000, guid: 77aef4d03efe4fd4bbd2f1c05501538a, type: 2}
+    playerPrefab: {fileID: 3164486375728856803, guid: b14094a794fd5bb4496fe849e87cd2d7, type: 3}
+  - id: pig
+    displayName: Pig
+    description: Starts big, tires quickly.
+    price: 800
+    definition: {fileID: 11400000, guid: 82ddcbd85fa8ce94c89593eb23526673, type: 2}
+    playerPrefab: {fileID: 2448898170776537557, guid: d81c836bba4cce54faeb2236d07dd0a6, type: 3}
+  - id: lion
+    displayName: Lion
+    description: The king of the savanna.
+    price: 1200
+    definition: {fileID: 11400000, guid: 031e3055a58e12042bdc81aab853270a, type: 2}
+    playerPrefab: {fileID: 7717197306378621769, guid: e6a15dc5be23b8f4a92e0dcb9d7992e0, type: 3}
+  - id: tiger
+    displayName: Tiger
+    description: An apex predator from day one.
+    price: 1500
+    definition: {fileID: 11400000, guid: 82b0c2ecb395aa54690089cb7eb9f3a2, type: 2}
+    playerPrefab: {fileID: 8415104234883618662, guid: 9b37d43b4b0daf946948d27a3bcf3363, type: 3}

@@ -20,6 +20,8 @@ MonoBehaviour:
   win: {fileID: 8300000, guid: 1062ca42c02d9934a9dfb90fed65d79c, type: 3}
   lose: {fileID: 8300000, guid: 8f66a0c41f0c65745af3725e56461a31, type: 3}
   reward: {fileID: 8300000, guid: ae72eba4af0dce74eb6318ec98c20eef, type: 3}
+  music: {fileID: 8300000, guid: ef8253094de2c0642b43de3860f2865d, type: 3}
+  musicVolume: 0.35
   voiceVolume: 0.9
   biteVolume: 0.7
   coinVolume: 0.45
