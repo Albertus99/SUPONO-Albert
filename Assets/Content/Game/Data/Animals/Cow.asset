@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Cow
   modelPrefab: {fileID: 919132149155446097, guid: 1f0f3801d2e0e464d9f3a23544ed5e28, type: 3}
+  eatenSound: {fileID: 8300000, guid: 03db5aef50955374fa54391e2728111e, type: 3}
   baseSize: 1.6
   bodyRadius: 0.6157937
   bodyHeight: 1.6123761
-  temperament: 1
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: c95155c55b2795b47b4c7ef06e91183c, type: 2}
   senseRadius: 8
   walkSpeed: 2
   sprintMultiplier: 1.5
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

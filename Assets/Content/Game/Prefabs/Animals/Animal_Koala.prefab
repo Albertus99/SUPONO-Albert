@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8672293461553631939}
   - component: {fileID: 1763646623378348366}
   - component: {fileID: 6222892557468154125}
+  - component: {fileID: 5784417536349949047}
   - component: {fileID: 6825663241557922045}
   m_Layer: 0
   m_Name: Animal_Koala
@@ -80,8 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
   definition: {fileID: 11400000, guid: 006d40fbca046d54a8f5fdab9ab56400, type: 2}
   visualRoot: {fileID: 6890233092949508621}
-  isPlayer: 0
-  isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
 --- !u!114 &7657876938729328831
@@ -157,6 +156,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.AI.AiBrain
   thinkInterval: 0.25
   wallMargin: 3
+--- !u!114 &5784417536349949047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909318154723922352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b34cb92253719d4bb5e37c71081bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.GrowthCap
+  maxMultiplier: 1.3
 --- !u!114 &6825663241557922045
 MonoBehaviour:
   m_ObjectHideFlags: 0

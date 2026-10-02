@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8556583320622586384}
   - component: {fileID: 5389161109144643581}
   - component: {fileID: 5035656831014604995}
+  - component: {fileID: 386674653175789173}
   - component: {fileID: 3791777705084880282}
   m_Layer: 0
   m_Name: Animal_PolarBear
@@ -80,8 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
   definition: {fileID: 11400000, guid: 1db684e882a881f408666231f91ae4e9, type: 2}
   visualRoot: {fileID: 4444973360752183118}
-  isPlayer: 0
-  isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
 --- !u!114 &5270959126690539749
@@ -157,6 +156,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.AI.AiBrain
   thinkInterval: 0.25
   wallMargin: 3
+--- !u!114 &386674653175789173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2505834922917032450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b34cb92253719d4bb5e37c71081bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.GrowthCap
+  maxMultiplier: 1.3
 --- !u!114 &3791777705084880282
 MonoBehaviour:
   m_ObjectHideFlags: 0

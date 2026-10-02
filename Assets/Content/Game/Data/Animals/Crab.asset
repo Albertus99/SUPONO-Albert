@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Crab
   modelPrefab: {fileID: 919132149155446097, guid: fb75c970a267fee4d921565534846e6c, type: 3}
+  eatenSound: {fileID: 8300000, guid: 0f193ef5f0d609f4c97f7ee46a5c0a62, type: 3}
   baseSize: 0.2
   bodyRadius: 0.93431246
   bodyHeight: 1.43125
-  temperament: 2
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: 41ed9cfcecfd5b9459103007debeff87, type: 2}
   senseRadius: 6
   walkSpeed: 2.5
   sprintMultiplier: 1.6
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

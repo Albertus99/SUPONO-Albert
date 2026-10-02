@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcb6c21b4837304a8d57fff7f774d81, type: 3}
+  m_Name: SoundLibrary
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Audio.SoundLibrary
+  bite: {fileID: 8300000, guid: bdda1e4f0f7ed2d488e4e9d7bf283605, type: 3}
+  munch: {fileID: 8300000, guid: d0dff6dcb056b8a4b8930056bcc6f691, type: 3}
+  energy: {fileID: 8300000, guid: 81f210a9c8141744d9219b72321911af, type: 3}
+  coin: {fileID: 8300000, guid: 86e51264b0dad3b4286936879e85197b, type: 3}
+  click: {fileID: 8300000, guid: f7fa0b57b1b759f47bb4d1b402b16ee9, type: 3}
+  win: {fileID: 8300000, guid: 1062ca42c02d9934a9dfb90fed65d79c, type: 3}
+  lose: {fileID: 8300000, guid: 8f66a0c41f0c65745af3725e56461a31, type: 3}
+  reward: {fileID: 8300000, guid: ae72eba4af0dce74eb6318ec98c20eef, type: 3}
+  voiceVolume: 0.9
+  biteVolume: 0.7
+  coinVolume: 0.45
+  uiVolume: 0.6

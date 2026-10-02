@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4464707681083041449}
   - component: {fileID: 6592855193200103000}
   - component: {fileID: 3832962823915069312}
+  - component: {fileID: 7101590784820995274}
   - component: {fileID: 5466083240614269010}
   m_Layer: 0
   m_Name: Animal_Tiger
@@ -80,8 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
   definition: {fileID: 11400000, guid: 00bb05489b75fa94a9ac1db095b176f6, type: 2}
   visualRoot: {fileID: 1289128922593134680}
-  isPlayer: 0
-  isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
 --- !u!114 &2033208067547599929
@@ -157,6 +156,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.AI.AiBrain
   thinkInterval: 0.25
   wallMargin: 3
+--- !u!114 &7101590784820995274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5602183451422181253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b34cb92253719d4bb5e37c71081bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.GrowthCap
+  maxMultiplier: 1.3
 --- !u!114 &5466083240614269010
 MonoBehaviour:
   m_ObjectHideFlags: 0

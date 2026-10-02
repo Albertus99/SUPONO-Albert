@@ -1,0 +1,273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6868883862020244571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3639515772621277433}
+  - component: {fileID: 3169145241449372278}
+  - component: {fileID: 5032216984584441068}
+  - component: {fileID: 8492031432035996543}
+  - component: {fileID: 5396307759277509708}
+  - component: {fileID: 5297718156905470524}
+  - component: {fileID: 577430152840250634}
+  - component: {fileID: 5041417770749868408}
+  - component: {fileID: 6020717673627187157}
+  m_Layer: 0
+  m_Name: Player_Cat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3639515772621277433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 674522629841530633}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &3169145241449372278
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 0.7694974
+  m_Radius: 0.3250838
+  m_SlopeLimit: 45
+  m_StepOffset: 0.19237435
+  m_SkinWidth: 0.03250838
+  m_MinMoveDistance: 0
+  m_Center: {x: 0, y: 0.3847487, z: 0}
+--- !u!114 &5032216984584441068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f3daf50d78394e4ea260b16f3007a31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
+  definition: {fileID: 11400000, guid: c44bbe742339e594791d9358feb857ed, type: 2}
+  visualRoot: {fileID: 674522629841530633}
+  sizeOverride: 0
+  deathDuration: 0.25
+--- !u!114 &8492031432035996543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ad159c65692da47b69bac949f6c2b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Stamina
+  recoverThreshold: 0.3
+  regenDelay: 0.75
+--- !u!114 &5396307759277509708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cab102e11b931324ca59401ca644d047, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalMotor
+  turnSpeed: 540
+  acceleration: 8
+  gravity: -30
+--- !u!114 &5297718156905470524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4222fb440f5f5074a98bc212ab33401b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Eater
+  reach: 1.2
+--- !u!114 &577430152840250634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a291490b5d3e1c4489b6a66c4249b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalAnimator
+  animator: {fileID: 7071282609955937727}
+  idle: {fileID: -5252816984213320552, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+  walk: {fileID: -3419257869308726280, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+  run: {fileID: 6200578666267062213, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+  blendSharpness: 10
+--- !u!114 &5041417770749868408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb54c6b147536eb498061f9b9a8be1d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Brains.PlayerInputBrain
+  actionMap: Player
+  moveAction: Move
+  sprintAction: Sprint
+--- !u!114 &6020717673627187157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6868883862020244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ffe71961046c445a0e5f05677edf76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.PlayerAvatar
+--- !u!1001 &1069283576779360482
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3639515772621277433}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.45
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7071282609955937727}
+  m_SourcePrefab: {fileID: 100100000, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+--- !u!1 &150785300373370291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+  m_PrefabInstance: {fileID: 1069283576779360482}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7071282609955937727
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150785300373370291}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &674522629841530633 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+  m_PrefabInstance: {fileID: 1069283576779360482}
+  m_PrefabAsset: {fileID: 0}

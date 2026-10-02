@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Hog
   modelPrefab: {fileID: 919132149155446097, guid: 07371142c473dbd4498e9e31fbedbdbd, type: 3}
+  eatenSound: {fileID: 8300000, guid: 23e235bd4d4bcfa42ae56aa8a944e078, type: 3}
   baseSize: 0.9
   bodyRadius: 0.6003621
   bodyHeight: 1.5157998
-  temperament: 1
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: c95155c55b2795b47b4c7ef06e91183c, type: 2}
   senseRadius: 8
   walkSpeed: 3
   sprintMultiplier: 1.6
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

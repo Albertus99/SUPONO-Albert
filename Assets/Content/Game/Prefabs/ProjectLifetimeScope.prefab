@@ -52,4 +52,6 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   levelCatalog: {fileID: 11400000, guid: 566fc90ec4bfe4f47aaab84a85d7f304, type: 2}
   windowCatalog: {fileID: 11400000, guid: 0b9729bee199eb04da956fb9851f675e, type: 2}
+  shopCatalog: {fileID: 11400000, guid: a55292578491c8a4cbed4b4f2f6c593f, type: 2}
+  soundLibrary: {fileID: 11400000, guid: 4c72780e6b309a844bd911e88316e1cc, type: 2}
   uiRootPrefab: {fileID: 553927256416626586, guid: 816ec60bfd7e2cd45940d945811eac6f, type: 3}

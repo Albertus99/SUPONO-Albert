@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 8027112017816564769}
   - component: {fileID: 5810797012901007925}
   - component: {fileID: 8708292453167606366}
+  - component: {fileID: 1005249790565447713}
   - component: {fileID: 1106056435380184979}
   m_Layer: 0
   m_Name: Animal_Elephant
@@ -170,8 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
   definition: {fileID: 11400000, guid: 80c96eef5494ed544b55d6cf904f67fb, type: 2}
   visualRoot: {fileID: 8482379997085023748}
-  isPlayer: 0
-  isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
 --- !u!114 &2762142612349386675
@@ -247,6 +246,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.AI.AiBrain
   thinkInterval: 0.25
   wallMargin: 3
+--- !u!114 &1005249790565447713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8189948799495924087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b34cb92253719d4bb5e37c71081bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.GrowthCap
+  maxMultiplier: 1.3
 --- !u!114 &1106056435380184979
 MonoBehaviour:
   m_ObjectHideFlags: 0

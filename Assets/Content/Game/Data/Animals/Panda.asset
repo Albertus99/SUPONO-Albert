@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Panda
   modelPrefab: {fileID: 919132149155446097, guid: c1c251c639efa6547bc1e21b6cfb341c, type: 3}
+  eatenSound: {fileID: 8300000, guid: 7dfe44be906305c47acdf550cc2e11dc, type: 3}
   baseSize: 1.2
   bodyRadius: 0.5759432
   bodyHeight: 1.5012499
-  temperament: 1
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: c95155c55b2795b47b4c7ef06e91183c, type: 2}
   senseRadius: 8
   walkSpeed: 2.2
   sprintMultiplier: 1.5
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Parrot
   modelPrefab: {fileID: 919132149155446097, guid: 3a20cb8210a9b1048affbe52beeb58a1, type: 3}
+  eatenSound: {fileID: 8300000, guid: a18046decfa5f94429343c093be8e55f, type: 3}
   baseSize: 0.3
   bodyRadius: 0.8783949
   bodyHeight: 1.68125
-  temperament: 0
-  eatsAnimals: 0
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 273b4fd375046cd44b5c003f77461d33, type: 2}
+  behaviour: {fileID: 11400000, guid: bdf7649b886355a4bb67bdccf092db10, type: 2}
   senseRadius: 7
   walkSpeed: 3.5
   sprintMultiplier: 1.7
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

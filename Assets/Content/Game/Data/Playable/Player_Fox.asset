@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693389c3110262541b2730df1e317900, type: 3}
+  m_Name: Player_Fox
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
+  displayName: Fox
+  modelPrefab: {fileID: 919132149155446097, guid: d15de5fd418ce8b4fbaa4f43baf4a12c, type: 3}
+  eatenSound: {fileID: 8300000, guid: ce1bf9c20626fbc4b98e2e8e419aa734, type: 3}
+  baseSize: 0.5
+  bodyRadius: 0.9233667
+  bodyHeight: 1.6863247
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 0}
+  senseRadius: 9
+  walkSpeed: 5.3
+  sprintMultiplier: 1.8
+  sprintDuration: 3.5
+  passiveStaminaRecovery: 0
+  staminaRecoveryDuration: 4.5

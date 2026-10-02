@@ -67,6 +67,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb5e832b346625e46b7f9768d92f845e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Food.FoodPickup
+  group: {fileID: 11400000, guid: 5b7dbdb7a2986884e9f2501db89ed160, type: 2}
+  eatenSound: {fileID: 8300000, guid: d0dff6dcb056b8a4b8930056bcc6f691, type: 3}
   nutrition: 0.12
   energy: 0
   size: 0.05

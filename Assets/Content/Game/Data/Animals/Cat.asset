@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Cat
   modelPrefab: {fileID: 919132149155446097, guid: d697a02c7d188ce4891f6ed49dd1b227, type: 3}
+  eatenSound: {fileID: 8300000, guid: dcd1c236d7ebceb438f55f3ebba7e2cb, type: 3}
   baseSize: 0.45
   bodyRadius: 0.7224085
   bodyHeight: 1.7099943
-  temperament: 2
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: 41ed9cfcecfd5b9459103007debeff87, type: 2}
   senseRadius: 8
   walkSpeed: 5
   sprintMultiplier: 1.8
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

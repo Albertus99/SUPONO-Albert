@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Deer
   modelPrefab: {fileID: 919132149155446097, guid: b5203420a751edf4aa4629d73a9369fa, type: 3}
+  eatenSound: {fileID: 8300000, guid: afbdc30f46afebd469d68a38eda95ec4, type: 3}
   baseSize: 1.3
   bodyRadius: 0.62386006
   bodyHeight: 1.9927862
-  temperament: 0
-  eatsAnimals: 0
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 273b4fd375046cd44b5c003f77461d33, type: 2}
+  behaviour: {fileID: 11400000, guid: bdf7649b886355a4bb67bdccf092db10, type: 2}
   senseRadius: 12
   walkSpeed: 4.5
   sprintMultiplier: 1.7
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

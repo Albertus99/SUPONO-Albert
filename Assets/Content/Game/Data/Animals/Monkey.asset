@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Monkey
   modelPrefab: {fileID: 919132149155446097, guid: 9ea38c7556dd16a4cb25950ab38547c0, type: 3}
+  eatenSound: {fileID: 8300000, guid: 5efc45c0b2ac40a46ab7eaad9acffee4, type: 3}
   baseSize: 0.65
   bodyRadius: 0.7929188
   bodyHeight: 1.6099944
-  temperament: 1
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: c95155c55b2795b47b4c7ef06e91183c, type: 2}
   senseRadius: 7
   walkSpeed: 3.5
   sprintMultiplier: 1.6
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

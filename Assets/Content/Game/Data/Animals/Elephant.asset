@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Elephant
   modelPrefab: {fileID: 919132149155446097, guid: 08a2c1c03ac636b4184cb9b1bb239f19, type: 3}
+  eatenSound: {fileID: 8300000, guid: 090fde81a5a62f14b82954d5a91a659a, type: 3}
   baseSize: 3
   bodyRadius: 0.7511408
   bodyHeight: 1.4312501
-  temperament: 1
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: c95155c55b2795b47b4c7ef06e91183c, type: 2}
   senseRadius: 10
   walkSpeed: 2
   sprintMultiplier: 1.5
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

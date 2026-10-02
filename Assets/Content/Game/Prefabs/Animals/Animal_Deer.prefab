@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 584137991378778928}
   - component: {fileID: 8697845705000433443}
   - component: {fileID: 3985410771871699097}
+  - component: {fileID: 2687855311152419408}
   - component: {fileID: 7107485044551378085}
   m_Layer: 0
   m_Name: Animal_Deer
@@ -170,8 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
   definition: {fileID: 11400000, guid: 8b824ced5d5ab0243bddb8a0a1cd8741, type: 2}
   visualRoot: {fileID: 6063366219420862592}
-  isPlayer: 0
-  isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
 --- !u!114 &5717464437092283915
@@ -247,6 +246,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.AI.AiBrain
   thinkInterval: 0.25
   wallMargin: 3
+--- !u!114 &2687855311152419408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6230460142677750490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b34cb92253719d4bb5e37c71081bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.GrowthCap
+  maxMultiplier: 1.3
 --- !u!114 &7107485044551378085
 MonoBehaviour:
   m_ObjectHideFlags: 0

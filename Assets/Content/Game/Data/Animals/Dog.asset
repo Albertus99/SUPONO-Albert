@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Dog
   modelPrefab: {fileID: 919132149155446097, guid: 3cdcbba357cbc7648b9cebdeffe36419, type: 3}
+  eatenSound: {fileID: 8300000, guid: fa915826099b5074bac63b08a2182540, type: 3}
   baseSize: 0.75
   bodyRadius: 0.60020703
   bodyHeight: 1.5844365
-  temperament: 2
-  eatsAnimals: 1
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 248f1267aeb828244ba7291b04e085a7, type: 2}
+  behaviour: {fileID: 11400000, guid: 41ed9cfcecfd5b9459103007debeff87, type: 2}
   senseRadius: 10
   walkSpeed: 4
   sprintMultiplier: 1.6
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5

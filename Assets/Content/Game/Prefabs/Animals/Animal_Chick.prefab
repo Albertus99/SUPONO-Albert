@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6392638488661348112}
   - component: {fileID: 1976886736702293728}
   - component: {fileID: 4013502633437844552}
+  - component: {fileID: 9032578803414701699}
   - component: {fileID: 1308011357777939588}
   m_Layer: 0
   m_Name: Animal_Chick
@@ -80,8 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
   definition: {fileID: 11400000, guid: 19d80fc8d92275d42a93ab1deb6e5017, type: 2}
   visualRoot: {fileID: 29177872286321980}
-  isPlayer: 0
-  isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
 --- !u!114 &7296314076039989860
@@ -157,6 +156,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.AI.AiBrain
   thinkInterval: 0.25
   wallMargin: 3
+--- !u!114 &9032578803414701699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6824664286793776737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b34cb92253719d4bb5e37c71081bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.GrowthCap
+  maxMultiplier: 1.3
 --- !u!114 &1308011357777939588
 MonoBehaviour:
   m_ObjectHideFlags: 0

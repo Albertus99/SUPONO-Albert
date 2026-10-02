@@ -14,5 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.App::Supono.App.Flow.LevelCatalog
   mainMenuScenePath: Assets/Content/Game/Scenes/MainMenu.unity
   levels:
-  - displayName: "Level 1 \xB7 The Big Room"
+  - displayName: Backyard
     scenePath: Assets/Content/Game/Scenes/Level01.unity
+    completionReward: 50
+  - displayName: Bamboo Garden
+    scenePath: Assets/Content/Game/Scenes/Level02.unity
+    completionReward: 75
+  - displayName: Pride Lands
+    scenePath: Assets/Content/Game/Scenes/Level03.unity
+    completionReward: 100
+  - displayName: Tall Grass
+    scenePath: Assets/Content/Game/Scenes/Level04.unity
+    completionReward: 150
+  - displayName: The Big Room
+    scenePath: Assets/Content/Game/Scenes/Level05.unity
+    completionReward: 250

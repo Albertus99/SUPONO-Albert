@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 2352886700242859892}
   - component: {fileID: 2743561445144876096}
   - component: {fileID: 3774078987346376184}
+  - component: {fileID: 7821839570539293747}
   - component: {fileID: 7895538978215308408}
   m_Layer: 0
   m_Name: Animal_Hog
@@ -170,8 +171,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.Animal
   definition: {fileID: 11400000, guid: 18ac3b0745733b54bb0cdd0ba33b0cc2, type: 2}
   visualRoot: {fileID: 5153936646411556987}
-  isPlayer: 0
-  isLevelGoal: 0
   sizeOverride: 0
   deathDuration: 0.25
 --- !u!114 &4118025808430671498
@@ -247,6 +246,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.AI.AiBrain
   thinkInterval: 0.25
   wallMargin: 3
+--- !u!114 &7821839570539293747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457750204426885272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b34cb92253719d4bb5e37c71081bca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.GrowthCap
+  maxMultiplier: 1.3
 --- !u!114 &7895538978215308408
 MonoBehaviour:
   m_ObjectHideFlags: 0

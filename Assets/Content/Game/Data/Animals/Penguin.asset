@@ -14,13 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Supono.Gameplay::Supono.Animals.AnimalDefinition
   displayName: Penguin
   modelPrefab: {fileID: 919132149155446097, guid: b5e6915b539356a4b93743d159540f4a, type: 3}
+  eatenSound: {fileID: 8300000, guid: 474a7273ae9f5b9449c85ec225196260, type: 3}
   baseSize: 0.55
   bodyRadius: 0.87581104
   bodyHeight: 1.59425
-  temperament: 0
-  eatsAnimals: 0
+  foodGroup: {fileID: 11400000, guid: 05d8815a10608bf4782a064d335fdf00, type: 2}
+  diet: {fileID: 11400000, guid: 273b4fd375046cd44b5c003f77461d33, type: 2}
+  behaviour: {fileID: 11400000, guid: bdf7649b886355a4bb67bdccf092db10, type: 2}
   senseRadius: 6
   walkSpeed: 2
   sprintMultiplier: 1.5
   sprintDuration: 3
+  passiveStaminaRecovery: 1
   staminaRecoveryDuration: 5
