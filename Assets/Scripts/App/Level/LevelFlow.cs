@@ -7,6 +7,7 @@ using Supono.App.Flow;
 using Supono.App.Progress;
 using Supono.Audio;
 using Supono.App.Windows;
+using Supono.App.Windows.Controls;
 using Supono.Core;
 using Supono.UI;
 using UnityEngine;
@@ -77,7 +78,7 @@ namespace Supono.App.Level
             string title = gameFlow.CurrentLevel?.displayName ?? SceneManager.GetActiveScene().name;
             string goal = registry.Goal != null ? registry.Goal.DisplayName : "biggest animal";
             string body = $"Eat smaller animals to grow.\nEat the <b>{goal}</b> to win!\n\n" +
-                          "<size=26>WASD move   ·   Shift sprint   ·   Esc pause\n" +
+                          $"<size=26>{TouchControls.Hint}\n" +
                           "Food grows you. Stamina only refills from blue-ringed food. Grab the coins!</size>";
 
             LevelIntroWindow intro = await windows.OpenAsync<LevelIntroWindow>(w => w.Setup(title, body), cancellation);

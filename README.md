@@ -82,6 +82,7 @@ audio) lives in `Assets/Content`.
 ## Feature checklist
 
 - [x] Core loop: eat smaller animals and food to grow; get eaten by bigger ones; eat the goal animal to win
+- [x] Portrait mobile UI and touch controls: a floating joystick (touch anywhere in the lower-left) and a hold-to-sprint button. They drive a virtual gamepad through the same Input System actions as the keyboard
 - [x] Player and NPCs share a controller (CharacterController + new Input System); passive / neutral / aggressive AI that reacts to relative size
 - [x] Common-sense animal scales (bee < cat < dog < … < elephant)
 - [x] Stamina and sprint; stamina refills only from energy food
